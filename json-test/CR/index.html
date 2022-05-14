@@ -1,0 +1,21 @@
+<html lang = en>
+  <head>
+      <p>blah blah blah</p>
+      <p>test test test</p>
+  </head>
+  <body>
+    <script>
+      const api_url = 'https://api.clashroyale.com/v1/players/%239GPUQQJGG/battlelog';
+      async function getISS(){
+        const response = await fetch (api_url,{
+          "typ": "JWT",
+          "alg": "HS512",
+          "kid": "28a318f7-0000-a1eb-7fa1-2c7433c6cca5"
+          } );
+        const data = await response.json();
+        console.log(data);
+      }
+
+      getISS();
+    </script>
+  </body>
