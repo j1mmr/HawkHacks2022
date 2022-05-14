@@ -1,0 +1,37 @@
+function wrongOp(){
+		 bot.sendMessage({
+                    to: channelID,
+                    message: 'last opponent was not p2, please try again'
+                });
+	}
+
+function output (player1, crown1, player2, crown2){
+  		
+		 bot.sendMessage({
+                    to: channelID,
+                    message: "Game Result: " + player1 + ": " + parseInt(crown1) + " - " + player2 + ": " + parseInt(crown2)
+                	});
+		}
+		
+		if (crown1 > crown2) {
+		
+		bot.sendMessage({
+                    to: channelID,
+                    message: player1 + " wins!"
+                	});
+    			
+  		} else if (crown1 < crown2){
+
+		bot.sendMessage({
+                    to: channelID,
+                    message: player2 + " wins!"
+                	});
+    			
+  		} else {
+
+		bot.sendMessage({
+                    to: channelID,
+                    message: "Draw!"
+                	});
+  
+  		}
